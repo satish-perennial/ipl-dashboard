@@ -16,6 +16,6 @@ public class TeamServiceImpl implements TeamService {
     @Override
     public Team findByTeamName(String teamName) {
         Optional<Team> byTeamName = teamRepository.findByTeamName(teamName);
-        return byTeamName.orElse(null);
+        return byTeamName.orElse(new Team());
     }
 }
